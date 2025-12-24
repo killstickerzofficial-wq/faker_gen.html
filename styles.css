@@ -1,0 +1,125 @@
+/* styles.css for Colorado Real ID Generator - Updated with Enhancements */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #003366; /* Colorado blue */
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1400px; /* Increased for new elements */
+    margin: 0 auto;
+    gap: 20px;
+}
+
+#idForm {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px; /* Limit width for form */
+}
+
+#idForm h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px; /* Space for multiple buttons */
+}
+
+button:hover {
+    background-color: #005580;
+}
+
+#signatureCanvas {
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.preview {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px; /* Limit for preview */
+}
+
+#idCanvas {
+    border: 2px solid #000;
+    background-color: #e6f3ff; /* Light blue background to mimic ID */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    margin: 10px 0;
+    /* Dimensions: Based on real Colorado DL scaled up for preview (original ~3.375" x 2.125" at 300dpi is ~1012x637px) */
+}
+
+/* Styles for new elements */
+#outputType {
+    margin-bottom: 10px;
+}
+
+#clearSignature {
+    background-color: #cc0000; /* Red for clear */
+}
+
+#clearSignature:hover {
+    background-color: #aa0000;
+}
+
+#editPhotoBtn {
+    background-color: #009900; /* Green for edit */
+}
+
+#editPhotoBtn:hover {
+    background-color: #007700;
+}
+
+/* Error or highlight styles if needed */
+.error {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    #idForm, .preview {
+        max-width: none;
+    }
+}
