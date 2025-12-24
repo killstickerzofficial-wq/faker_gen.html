@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Real ID Template Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bwip-js@3.0.4/dist/bwip-js-min.js"></script>
+</head>
+<body>
+    <h1>Colorado Real ID Template Generator</h1>
+    <div class="container">
+        <form id="idForm">
+            <h2>Customize Your ID</h2>
+            <label>Full Name: <input type="text" id="fullName" value="JOHN DOE"></label>
+            <label>Street Address: <input type="text" id="street" value="123 MAIN ST"></label>
+            <label>City, State ZIP: <input type="text" id="cityStateZip" value="DENVER, CO 80201"></label>
+            <label>DL Number: <input type="text" id="dlNumber" value="A123456789"></label>
+            <label>Class: <select id="dlClass"><option>A</option><option>B</option><option>C</option></select></label>
+            <label>Restrictions: <input type="text" id="restrictions" value="NONE"></label>
+            <label>Endorsements: <input type="text" id="endorsements" value="NONE"></label>
+            <label>Sex: <select id="sex"><option>M</option><option>F</option><option>X</option></select></label>
+            <label>Height: <input type="text" id="height" value="5'-10&quot;"></label>
+            <label>Eye Color: <input type="text" id="eyes" value="BRN"></label>
+            <label>Hair Color: <input type="text" id="hair" value="BLK"></label>
+            <label>Weight: <input type="text" id="weight" value="180"></label>
+            <label>Date of Birth: <input type="text" id="dob" value="01/01/2000"></label>
+            <label>Issue Date: <input type="text" id="issueDate" value="01/01/2023"></label>
+            <label>Expiration Date: <input type="text" id="expDate" value="01/01/2031"></label>
+            <label>Organ Donor: <select id="donor"><option>YES</option><option>NONE</option></select></label>
+            <label>Upload Photo: <input type="file" id="photoUpload" accept="image/*"></label>
+            <label>REAL ID Compliant: <input type="checkbox" id="realIDCheck" checked></label>
+            <button type="button" id="generateBtn">Generate ID</button>
+        </form>
+        <div class="preview">
+            <button id="toggleSide">Toggle Side (Front/Back)</button>
+            <canvas id="idCanvas" width="1012" height="637"></canvas>
+            <button id="downloadBtn">Download PNG</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
